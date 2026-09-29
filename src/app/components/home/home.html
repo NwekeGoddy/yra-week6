@@ -1,0 +1,13 @@
+<div class="page-wrapper">
+    <div class="page" [ngStyle]="{ 'background-color': bgColorFromSubject() }">
+        <p class="eyebrow">SUBJECT DEMO</p>
+        <h1 class="greeting">{{ pageTitle() }}</h1>
+    </div>
+
+
+    <div class="page" [ngStyle]="{ 'background-color': bgColorFromBehavior() }">
+        <p class="eyebrow">BEHAVIOR SUBJECT DEMO</p>
+        <h1 class="greeting">{{ pageTitle() }}</h1>
+     
+    </div>
+</div>

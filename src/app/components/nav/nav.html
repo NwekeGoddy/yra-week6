@@ -1,0 +1,29 @@
+<header>
+    <nav>
+        <a routerLink="/" class="logo">
+            <span class="logo-icon">YRA</span>
+            <span class="logo-text">Young Researcher Academy</span>
+        </a>
+
+        <ul>
+            <li><a routerLink="/about" routerLinkActive="active">About</a></li>
+            <li><a routerLink="/programmes" routerLinkActive="active">Programmes</a></li>
+            <li><a routerLink="/resources" routerLinkActive="active">Resources</a></li>
+            <li><a routerLink="/events" routerLinkActive="active">Events</a></li>
+            <li><a routerLink="/media" routerLinkActive="active">Media</a></li>
+            <li><a routerLink="/opportunities" routerLinkActive="active">Opportunities</a></li>
+            <li><a routerLink="/community" routerLinkActive="active">Community</a></li>
+        </ul>
+
+        <select class="color-picker" (change)="onColorChange($event)">
+            @for (c of colors; track c) {
+            <option [value]="c">{{ c | titlecase }}</option>
+            }
+        </select>
+
+        <div class="actions">
+            <button routerLink="/login" class="btn-login">Login</button>
+            <button routerLink="/join" class="btn-join">Join YRA</button>
+        </div>
+    </nav>
+</header>

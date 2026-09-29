@@ -1,0 +1,40 @@
+.page-wrapper {
+    padding: 40px 8%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.page {
+    padding: 40px;
+    border-radius: 12px;
+    border: 1px solid #e9ecef;
+    transition: background-color 0.3s ease;
+}
+
+.eyebrow {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #e07b2d;
+    margin: 0 0 10px;
+}
+
+.greeting {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 38px;
+    font-weight: 700;
+    color: #1f2937;
+    margin: 0 0 10px;
+}
+
+.hint {
+    font-size: 14px;
+    color: #4b5563;
+    margin: 0;
+}
+
+.hint strong {
+    color: #1f2937;
+}
