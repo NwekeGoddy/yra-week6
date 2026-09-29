@@ -1,1 +1,50 @@
-<p>login works!</p>
+<div class="login-page">
+    <div class="login-card">
+        <p class="eyebrow">YRA ACCOUNT</p>
+        <h1 class="title">Welcome back</h1>
+        <p class="subtitle">Sign in to access your member dashboard.</p>
+
+        <form>
+            <div class="field">
+                <label for="email">Email address</label>
+                <input id="email" type="email" placeholder="you@example.com" [formField]="loginForm.email" />
+                @if (loginForm.email().touched() && loginForm.email().errors().length) {
+                <p class="error">{{ loginForm.email().errors()[0].message }}</p>
+                }
+            </div>
+
+            <div class="field">
+                <label for="password">Password</label>
+                <input id="password" type="password" placeholder="••••••••" [formField]="loginForm.password" />
+                @if (loginForm.password().touched() && loginForm.password().errors().length) {
+                <p class="error">{{ loginForm.password().errors()[0].message }}</p>
+                }
+            </div>
+
+            <label class="checkbox-row">
+                <input type="checkbox" [formField]="loginForm.rememberMe" />
+                <span>Remember me</span>
+            </label>
+
+            <div class="button-row">
+                <button type="button" class="submit-btn" [disabled]="loginForm().invalid()"
+                    (click)="submitWithPromise($event)">
+                    Sign in (Promise)
+                </button>
+
+                <button type="button" class="submit-btn outline" [disabled]="loginForm().invalid()"
+                    (click)="submitWithObservable($event)">
+                    Sign in (Observable)
+                </button>
+            </div>
+
+            @if (statusMessage()) {
+            <p class="status">{{ statusMessage() }}</p>
+            }
+        </form>
+
+        <p class="footer-text">
+            New to YRA? <a routerLink="/join">Create an account</a>
+        </p>
+    </div>
+</div>

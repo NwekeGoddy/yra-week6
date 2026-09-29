@@ -13,7 +13,7 @@ export class ColorService {
     this.colorSubject.next(color);
   }
 
- private colorBehaviorSubject = new BehaviorSubject<string>('white');
+ private colorBehaviorSubject = new BehaviorSubject<string>('green'); //default color green
   colorBehaviorSubject$ = this.colorBehaviorSubject.asObservable();
 
   setColorViaBehaviorSubject(color: string) {
